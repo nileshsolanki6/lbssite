@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        min-width: 120vw;
+        min-height: 200vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box{
+        width: 200px;
+        height: 150px;
+        background-color: white;
+        /* border-radius: 50%; */
+        border: 1px solid grey;
+        border-top: 50px solid orange;
+        border-bottom: 50px solid green;
+        animation: rotateAnim 2s infinite linear;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .box::before{
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: -60px;
+        border-radius: 20px;
+        width: 10px;
+        height: 400px;
+        background-color: grey;
+    }
+
+    
+    .box::after{
+        content: '';
+        position: absolute;
+        left: -14px;
+        top: -70px;
+        border-radius: 20px;
+        width: 18px;
+        height: 18px;
+        background-color: black;
+    }
+
+    img{
+        width: 50px;
+        animation: rotateChakra 3s infinite linear;
+        animation-direction: reverse;
+        border-radius: 50%;
+    }
+
+    .pedis{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        top: 300px;
+        left: -305px;
+    }
+
+    .pedi{
+        border: 1px solid black;
+    }
+    .pedi:nth-child(1){
+        width: 80px;
+        height: 50px;
+        background-color: beige;
+    }
+    .pedi:nth-child(2){
+        width: 150px;
+        height: 50px;
+        background-color: beige;
+    }
+    .pedi:nth-child(3){
+        width: 200px;
+        height: 50px;
+        background-color: beige;
+    }
+
+    @keyframes rotateChakra{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
+
+</style>
+<body>
+    <div class="box">
+        <img src="chakra.jpg" alt="">
+    </div>
+    <div class="pedis">
+        <div class="pedi"></div>
+        <div class="pedi"></div>
+        <div class="pedi"></div>
+    </div>
+</body>
+</html>
